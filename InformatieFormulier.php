@@ -7,9 +7,18 @@
         echo "Waar kennen we elkaar van:".$_POST ["kennen"]."<br>";
         echo "Lievelings eten:".$_POST ["eten"]."<br>";
         echo "Lievelings kleur:".$_POST ["kleur"]."<br>";
-        echo "Dier:".$_POST ["dier"]."<br>";
+        echo "Drinken:".$_POST ["drinken"]."<br>";
+        echo "Jaargetijden:".$_POST ["getijden"]."<br>";
+        echo "Lievelingsdieren:".$_POST["dieren[]"]."<br>";
+        echo "Moeilijke keuze:".$_POST["keuze"]."<br>";
+        echo "Gedichtje:".$_POST["gedicht"]."<br><br>";
         
+        echo "Bedankt voor het invullen!";
         
+        //test om meerdere waardes te bewaren van checkboxes      
+        if(!empty($_POST['dieren'])) {
+        foreach($_POST['dieren'] as $check) {
+        echo $check;
         
         $naam = $_POST["naam"];
         $leeftijd = $_POST["leeftijd"];
@@ -27,8 +36,7 @@
         opslaan($eten, $regel);
         $regel = "lievelings kleur: " . $_POST['kleur'];
         opslaan($eten, $regel);
-        
-     //   $query = "INSERT INTO `personen` (`naam`, `adres`, `woonplaats`, `gender` ) VALUES ( '$naam', '$adres', '$woonplaats', '$gender'  )";
+          
         
             function opslaan($var1, $var2) {
             $fh = fopen($var1 . ".txt", 'a+');
@@ -43,6 +51,4 @@
 
         
     </body>
-    
-    
 </html>

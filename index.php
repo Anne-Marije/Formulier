@@ -49,17 +49,29 @@
         <br><input style="tekst" name="eten" id="opmaak"></input><br>
         Mijn lievelingskleur:
         <br><input style="tekst" name="kleur" id="opmaak"></input><br>
-        <br>
-       Wandelende tak
-        <input type="radio" name="dier" value="wandelende tak" checked="checked" />
+       
+         <br>
+       koffie
+        <input type="radio" name="drinken" value="koffie" checked="checked" />
         of
-        <input type="radio" name="dier" value="konijn" checked="checked" /> 
-       Konijn
-        
+        <input type="radio" name="drinken" value="thee" checked="checked" /> 
+       thee
+       <br>
+              zomer
+        <input type="radio" name="getijden" value="zomer" checked="checked" />
+        of
+        <input type="radio" name="getijden" value="winter" checked="checked" /> 
+       winter
+      <br>  
       <br>
-      <br>
+      Welke dieren vind je leuk:
+      <input type="checkbox" name="dieren[]" value="hond"> hond
+      <input type="checkbox" name="dieren[]" value="wandelende tak"> wandelende tak
+      <input type="checkbox" name="dieren[]" value="dolfijn"> dolfijn
+      <input type="checkbox" name="dieren[]" value="konijn"> konijn
+      <br><br>
          <label for="keuze">Wat heb je liever:</label>
-    <select id="keuze" name="Keuze">
+    <select id="keuze" name="keuze">
         <option value="" disabled selected>je moet kiezen</option>
       <option value="steentje">Altijd een steentje in je schoen.</option>
       <option value="sokken">Altijd natte sokken.</option>
@@ -67,10 +79,8 @@
         <br><br>
         
         
-        <textarea rows="4" cols="50" id="opmaak">Schrijf een klein gedichtje: </textarea>
+        <textarea rows="4" cols="50" id="opmaak" name="gedicht">Schrijf een klein gedichtje: </textarea>
         
-        <br><br>
-        <img src="poes.gif" id="plaatje2">
         <br><br>
         <input type="submit" value="Submit" background-color: green>
         
