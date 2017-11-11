@@ -39,9 +39,16 @@
         $regel = "drinken: ". $_POST["drinken"];
         opslaan ($naam, $regel);
          $regel = "jaargetijden: ". $_POST["getijden"];
-        opslaan ($naam, $regel);  
-         $regel = "dieren: ". $dieren;
         opslaan ($naam, $regel);
+        $regel = "dieren: ";
+        opslaan ($naam, $regel);
+        foreach ($_POST["dieren"] as $dieren){
+             
+            $regel = $dieren;  
+            opslaan ($naam, $regel);
+        }
+        
+        
          $regel = "keuze: ". $_POST["keuze"];
         opslaan ($naam, $regel);        
          $regel = "gedichtje: ". $_POST["gedicht"];
