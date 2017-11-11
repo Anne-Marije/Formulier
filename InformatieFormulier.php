@@ -9,17 +9,17 @@
         echo "Lievelings kleur:".$_POST ["kleur"]."<br>";
         echo "Drinken:".$_POST ["drinken"]."<br>";
         echo "Jaargetijden:".$_POST ["getijden"]."<br>";
-        echo "Lievelingsdieren:".$_POST["dieren[]"]."<br>";
+        echo "Lievelingsdier(en):";
+        foreach ($_POST["dieren"] as $dieren){
+            
+         echo $dieren." ";   
+        }
+        echo "<br>";
         echo "Moeilijke keuze:".$_POST["keuze"]."<br>";
         echo "Gedichtje:".$_POST["gedicht"]."<br><br>";
-        
-        echo "Bedankt voor het invullen!";
-        
-        //test om meerdere waardes te bewaren van checkboxes      
-        if(!empty($_POST['dieren'])) {
-        foreach($_POST['dieren'] as $check) {
-        echo $check;
-        
+        echo "Bedankt voor het invullen, ".$_POST["naam"]."!";
+          
+            
         $naam = $_POST["naam"];
         $leeftijd = $_POST["leeftijd"];
         $kennen = $_POST["kennen"];
@@ -29,14 +29,23 @@
         $regel = "naam: " . $_POST['naam'];
         opslaan($naam, $regel);
         $regel = "leeftijd: " . $_POST['leeftijd'];
-        opslaan($leeftijd, $regel);       
+        opslaan($naam, $regel);       
         $regel = "we kennen elkaar van: " . $_POST['kennen'];
-        opslaan($kennen, $regel);  
+        opslaan($naam, $regel);  
         $regel = "lievelings eten: " . $_POST['eten'];
-        opslaan($eten, $regel);
+        opslaan($naam, $regel);
         $regel = "lievelings kleur: " . $_POST['kleur'];
-        opslaan($eten, $regel);
-          
+        opslaan($naam, $regel);
+        $regel = "drinken: ". $_POST["drinken"];
+        opslaan ($naam, $regel);
+         $regel = "jaargetijden: ". $_POST["getijden"];
+        opslaan ($naam, $regel);  
+         $regel = "dieren: ". $dieren;
+        opslaan ($naam, $regel);
+         $regel = "keuze: ". $_POST["keuze"];
+        opslaan ($naam, $regel);        
+         $regel = "gedichtje: ". $_POST["gedicht"];
+        opslaan ($naam, $regel);
         
             function opslaan($var1, $var2) {
             $fh = fopen($var1 . ".txt", 'a+');

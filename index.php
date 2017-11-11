@@ -65,10 +65,10 @@
       <br>  
       <br>
       Welke dieren vind je leuk:
-      <input type="checkbox" name="dieren[]" value="hond"> hond
-      <input type="checkbox" name="dieren[]" value="wandelende tak"> wandelende tak
-      <input type="checkbox" name="dieren[]" value="dolfijn"> dolfijn
-      <input type="checkbox" name="dieren[]" value="konijn"> konijn
+      <p><input type="checkbox" name="dieren[]" value="hond"> hond</p>
+      <p><input type="checkbox" name="dieren[]" value="wandelende tak"> wandelende tak</p>
+      <p><input type="checkbox" name="dieren[]" value="dolfijn"> dolfijn</p>
+      <p><input type="checkbox" name="dieren[]" value="konijn"> konijn</p>
       <br><br>
          <label for="keuze">Wat heb je liever:</label>
     <select id="keuze" name="keuze">
